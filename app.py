@@ -11,7 +11,7 @@ def main():
             ("How many firearms do you own? Do not put commas or decimal points.", lambda x: x.isdigit() and int(x) >= 0, "You own {} firearm/firearms right now."),
             ("Would you use your firearm in self-defense (yes or no)?", lambda x: x.lower() in ('yes', 'no'), "You answered {}."),
             ("What is your gender identification? Male, Female, Nonbinary, Other?", lambda x: x.lower() in ('male', 'female', 'nonbinary', 'other'), "You answered {}."),
-            ("Please select the first reason you can think of for why you decided to purchase a firearm: defense, constitution, or sport", lambda x: x.lower() in ('defense', 'constitution', 'sport'), "You chose {}."),
+            ("Please select the first reason you can think of for why you decided to purchase a firearm: defense, constitution, or sport.", lambda x: x.lower() in ('defense', 'constitution', 'sport'), "You chose {}."),
             ("Which one of the selected options (numbers 1, 2, and 3) for the previous question is most important to you?", lambda x: x.isdigit() and int(x) in (1, 2, 3), "You answered {}."),
             ("How would you rate the amount of police presence in your neighborhood on a scale of 1-10, 10 being high?", lambda x: x.isdigit() and int(x) in range(1, 11), "Your selection is {}."),
             ("Do you feel threatened by racially motivated hate groups in the U.S. (yes or no)?", lambda x: x.lower() in ('yes', 'no'), "You chose {}."),

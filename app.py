@@ -7,7 +7,7 @@ def main():
     st.write('')
     myFirearms = None
     while myFirearms is None:
-        input_value = st.text_input('How many firearms do you own? Do not put commas or decimal points.', key="firearms_input")
+        input_value = st.text_input('How many firearms do you own? Do not put commas or decimal points.')
         try:
             myFirearms = int(input_value)
         except ValueError:

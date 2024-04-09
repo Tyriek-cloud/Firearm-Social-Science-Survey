@@ -5,12 +5,14 @@ Link to the survey application: https://social-science-survey-k5hwfqnspnpbxtn9dv
 ![image](https://github.com/Tyriek-cloud/Firearm-Social-Science-Survey/assets/62261407/134b1922-072c-4694-bee6-1fe2b31b3aa5)
 
 # Summary
+This is a survey application based on an old project of mine. The link to my old project is here: https://github.com/Tyriek-cloud/Individual-Projects/blob/main/SocialScienceSurvey.py
+
 This survey application is designed to have users input information about their firearm ownership, their opinions about firearms, their opinions about racial violence, and their perceptions of public safety officers (police).
 
 # Instructions
 The user must answer each question with a valid response to proceed. Any incorrect input will direct the user to have to re-enter an input. If the user enters a correct input, then they will be allowed to proceed to the next question.
 
-Additionally, the user's responses will be recorded immediately beneath the answere question like so: "You chose..."
+Additionally, the user's responses will be recorded immediately beneath the answered question like so: "You chose..."
 
 # List of Questions from the Survey
 - How many firearms do you own? Do not put commas or decimal points.

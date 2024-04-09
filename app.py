@@ -7,7 +7,7 @@ def main():
     st.write('')
     myFirearms = None
     while myFirearms is None:
-        input_value = st.text_area('How many firearms do you own? Do not put commas or decimal points.')
+        input_value = st.text_input('How many firearms do you own? Do not put commas or decimal points.', key="firearms_input")
         try:
             myFirearms = int(input_value)
         except ValueError:
@@ -18,7 +18,7 @@ def main():
 
     st.write('')
     while True:
-        Use = st.radio('Would you use your firearm in self-defense?', ('Yes', 'No'))
+        Use = st.radio('Would you use your firearm in self-defense?', ('Yes', 'No'), key="use_radio")
         if Use.lower() not in ('yes', 'no'):
             st.write('Not yes or no. Try again.')
         else:
@@ -30,7 +30,7 @@ def main():
 
     st.write('')
     while True:
-        Gender = st.radio('What is your gender identification? Male, Female, Nonbinary, Other?', ('Male', 'Female', 'Nonbinary', 'Other'))
+        Gender = st.radio('What is your gender identification? Male, Female, Nonbinary, Other?', ('Male', 'Female', 'Nonbinary', 'Other'), key="gender_radio")
         if Gender.lower() not in ('male', 'female', 'nonbinary', 'other'):
             st.write('Not one of the listed answer choices. Try again.')
         else:
@@ -46,7 +46,7 @@ def main():
 
     st.write('')
     while True:
-        Reason = st.radio('Please select the first reason you can think of for why you decided to purchase a firearm:', ('Defense', 'Constitution', 'Sport'))
+        Reason = st.radio('Please select the first reason you can think of for why you decided to purchase a firearm:', ('Defense', 'Constitution', 'Sport'), key="reason_radio")
         if Reason.lower() not in ('defense', 'constitution', 'sport'):
             st.write('Incorrect answer choice. Try again.')
         else:
@@ -60,7 +60,7 @@ def main():
 
     st.write('')
     while True:
-        myOption = st.radio('Which one of the selected options (numbers 1, 2, and 3) for the previous question is most important to you?', ('1', '2', '3'))
+        myOption = st.radio('Which one of the selected options (numbers 1, 2, and 3) for the previous question is most important to you?', ('1', '2', '3'), key="option_radio")
         if myOption.lower() not in ('1', '2', '3'):
             st.write("Not an appropriate choice.")
         else:
@@ -74,7 +74,7 @@ def main():
 
     st.write('')
     while True:
-        Presence = st.radio('How would you rate the amount of police presence in your neighborhood on a scale of 1-10, 10 being high?', tuple(str(i) for i in range(1, 11)))
+        Presence = st.radio('How would you rate the amount of police presence in your neighborhood on a scale of 1-10, 10 being high?', tuple(str(i) for i in range(1, 11)), key="presence_radio")
         if Presence.lower() not in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'):
             st.write('ONLY select a value from 1 to 10.')
         else:
@@ -83,7 +83,7 @@ def main():
 
     st.write('')
     while True:
-        Threatened = st.radio('Do you feel threatened by racially motivated hate groups in the U.S.?', ('Yes', 'No'))
+        Threatened = st.radio('Do you feel threatened by racially motivated hate groups in the U.S.?', ('Yes', 'No'), key="threatened_radio")
         if Threatened.lower() not in ('yes', 'no'):
             st.write('Not yes or no. Try again.')
         else:
@@ -95,7 +95,7 @@ def main():
 
     st.write('')
     while True:
-        Scared = st.radio('Do you feel scared of the police in the U.S.?', ('Yes', 'No'))
+        Scared = st.radio('Do you feel scared of the police in the U.S.?', ('Yes', 'No'), key="scared_radio")
         if Scared.lower() not in ('yes', 'no'):
             st.write('Not yes or no. Try again.')
         else:
@@ -107,7 +107,7 @@ def main():
 
     st.write('')
     while True:
-        Victimized = st.radio('Have you ever been victimized by police or racially motivated offenders in the U.S.?', ('Yes', 'No'))
+        Victimized = st.radio('Have you ever been victimized by police or racially motivated offenders in the U.S.?', ('Yes', 'No'), key="victimized_radio")
         if Victimized.lower() not in ('yes', 'no'):
             st.write('Not yes or no. Try again.')
         else:
